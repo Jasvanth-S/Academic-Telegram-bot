@@ -1,0 +1,6 @@
+aiogram
+motor
+python-dotenv
+requests
+openai
+asyncio
