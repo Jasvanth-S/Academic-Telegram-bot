@@ -129,10 +129,8 @@ async def get_dept(message: Message, state: FSMContext):
 @router.message(F.text & ~F.text.startswith("/"))
 async def ai_chat(message: Message):
     user_input = message.text
-    await message.delete()
+    
 
     ai_response = generate_ai_reply(user_input)
 
     bot_msg = await message.answer(ai_response)
-    await asyncio.sleep(6)
-    await bot_msg.delete()
